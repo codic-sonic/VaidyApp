@@ -26,7 +26,7 @@ export const getUserById = async (req, res, next) => {
 // Create a new user
 export const register = async (req, res, next) => {
   const user = new User({
-    name,
+    Name,
     email,
     age,
     gender,

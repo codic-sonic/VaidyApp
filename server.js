@@ -1,14 +1,18 @@
 import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/user-routes.js";
+import dotenv from "dotenv";
+
+import loginRoutes from "./routes/login-routes.js";
 
 const app = express();
-const port = process.env.PORT || 3000;
+dotenv.config();
+const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use("/api/user", router);
-
-//http://localhost:3000/api/user
+app.use("/api/login", loginRoutes);
+//http://localhost:8080/api/user
 mongoose.set("strictQuery", false);
 mongoose.connect(
   "mongodb+srv://admin:nandini@cluster0.vrd0ry1.mongodb.net/personalitydata?retryWrites=true&w=majority"
