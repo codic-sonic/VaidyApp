@@ -5,7 +5,7 @@ import Login from "../model/LoginSchema.js";
 const login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const userExist = await LoginSchema.findOne({ email });
+    const userExist = await Login.findOne({ email });
     if (!!userExist) {
       if (userExist?.password == password) {
         return res.status(200).json({ message: "login SuccessFull" })
@@ -24,7 +24,7 @@ const login = async (req, res) => {
 const SignUp = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const UserExist = await LoginSchema.find({ email })
+    const UserExist = await Login.find({ email })
     if (UserExist?.length == 0) {
       const userObj = new LoginSchema({
         email, password

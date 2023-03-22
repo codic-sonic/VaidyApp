@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/user-routes.js";
 import dotenv from "dotenv";
-
 import loginRoutes from "./routes/login-routes.js";
 
 const app = express();
