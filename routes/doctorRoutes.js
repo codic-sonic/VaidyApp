@@ -1,5 +1,5 @@
 import express from "express";
-import Doctor from "../model/doctorSchema.js";
+import Doctor from '../model/doctorSchema.js';
 const router = express.Router();
 
 router.post("/", async(req,res)=>{
