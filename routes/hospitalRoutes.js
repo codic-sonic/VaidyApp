@@ -6,8 +6,10 @@ router.post("/", async(req,res)=>{
    const {name,location,contactNumber,Rating}=req.body
     try {
         const newOBJ = new Hospital({name,location,contactNumber,Rating});
-       await newOBJ.save()
-       return res.status(200).json({message:"saved"})
+        if(!!name && !!location && !!contactNumber ){
+            await newOBJ.save()
+            return res.status(200).json({message:"saved"})
+        }
     } catch (error) {
         console.log(error)
     }
