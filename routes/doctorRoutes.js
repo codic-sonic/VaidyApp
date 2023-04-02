@@ -1,6 +1,6 @@
 import express from "express";
-import Doctor from '../model/doctorSchema.js';
 const router = express.Router();
+import Doctor from '../model/DoctorSchema.js';
 
 router.post("/", async(req,res)=>{
    const {name,specialty,contactNumber}=req.body

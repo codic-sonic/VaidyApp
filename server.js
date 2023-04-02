@@ -16,6 +16,7 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 app.use("/api/user", router);
+
 app.use("/api/auth", loginRoutes);
 app.use('/api/hospital',hospitalRoutes);
 app.use('/api/doctor',doctorRoutes);
