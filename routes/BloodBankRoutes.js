@@ -1,5 +1,5 @@
 import express from "express";
-import BloodBank from "../model/BloodBankSchema.js";
+import BloodBank from "../model/BloodBankschema.js";
 const router = express.Router();
 
 router.post("/", async(req,res)=>{
