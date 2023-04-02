@@ -16,6 +16,7 @@ router.post("/", async(req,res)=>{
 router.get("/", async(req,res)=>{
     try {
         const data = await Hospital.find();
+        console.log(data)
        return res.status(200).json({message:"saved",data})
     } catch (error) {
         console.log(error)
