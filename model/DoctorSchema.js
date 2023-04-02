@@ -11,6 +11,9 @@ const DoctorSchema = new Schema({
   },
   contactNumber: {
     type: Number,
+  },
+  Rating: {
+    type: Number
   }
 });
 

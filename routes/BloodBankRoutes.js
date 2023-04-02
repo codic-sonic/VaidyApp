@@ -3,9 +3,9 @@ import BloodBank from "../model/BloodBankschema.js";
 const router = express.Router();
 
 router.post("/", async(req,res)=>{
-   const {bloodCollection,contactNumber,location,name}=req.body
+   const {bloodCollection,contactNumber,location,name,Rating}=req.body
     try {
-        const newOBJ = new BloodBank({bloodCollection,contactNumber,location,name});
+        const newOBJ = new BloodBank({bloodCollection,contactNumber,location,name,Rating});
        await newOBJ.save()
        return res.status(200).json({message:"saved"})
     } catch (error) {

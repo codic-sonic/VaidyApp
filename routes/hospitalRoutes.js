@@ -3,9 +3,9 @@ import Hospital from "../model/HospitalSchema.js";
 const router = express.Router();
 
 router.post("/", async(req,res)=>{
-   const {name,location,contactNumber}=req.body
+   const {name,location,contactNumber,Rating}=req.body
     try {
-        const newOBJ = new Hospital({name,location,contactNumber});
+        const newOBJ = new Hospital({name,location,contactNumber,Rating});
        await newOBJ.save()
        return res.status(200).json({message:"saved"})
     } catch (error) {

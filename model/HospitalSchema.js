@@ -11,6 +11,9 @@ const HospitalSchema = new Schema({
   contactNumber: {
     type: Number
   },
+  Rating: {
+    type: Number
+  },
   doctors:[{
     type:mongoose.Schema.ObjectId,
     ref:"Hospital"

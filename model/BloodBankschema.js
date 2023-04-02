@@ -14,6 +14,8 @@ const BloodBankSchema = new Schema({
   },
   name:{
     type: String
+  },Rating: {
+    type: Number
   }
 });
 
